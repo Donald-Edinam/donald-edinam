@@ -13,8 +13,8 @@ export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-white">
-   <header className="absolute inset-x-0 top-0 z-50">
+    <div className="bg-white height-100">
+      <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
@@ -97,9 +97,9 @@ export default function Hero() {
         </Dialog>
       </header>
 
-      <div className="relative isolate px-6 pt-2lg:px-4">
+      <div className="relative bottom-0 isolate px-6 pt-2 lg:px-4 ">
         <div
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+          className="absolute inset-x-0 -top-50 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
         >
           <div
@@ -110,10 +110,10 @@ export default function Hero() {
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl py-24 sm:py-48 lg:py-40">
+        <div className="mx-auto max-w-2xl sm:py-48 lg:py-40 pad-top py-24 ">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-            Programming is not just coding, it is solving problems.{' '}
+              Programming is not just coding, it is solving problems.{' '}
               <a href="#" className="font-semibold text-indigo-600">
                 <span className="absolute inset-0" aria-hidden="true" />
                 Read more <span aria-hidden="true">&rarr;</span>
@@ -128,7 +128,7 @@ export default function Hero() {
               A Software Engineer
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-            I'm passionate about crafting experiences that are engaging, accessible, and user-centric.
+              I'm passionate about crafting experiences that are engaging, accessible, and user-centric.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
