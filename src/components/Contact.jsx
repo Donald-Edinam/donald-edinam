@@ -13,7 +13,7 @@ export default function Contact() {
           <div className="text-center">
             <p className="text-base font-semibold text-indigo-600">TWO HEADS ARE BETTER THAN ONE</p>
             <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Having a project idea in mind?</h1>
-            <p className="mt-6 text-base leading-7 text-gray-600">"What actions would you take if you had immediate access to a software expert? Whether you're initiating a new project or simply reaching out to say hello, feel free to connect with me. You can also find me on Instagram or reach me via email at tdrdimov@gmail.com</p>
+            <p className="mt-6 text-base leading-7 text-gray-600">"What actions would you take if you had immediate access to a software expert? Whether you're initiating a new project or simply reaching out to say hello, feel free to connect with me. You can also find me with reach me via email at <a className="underline" href="mailto:kobbyedinamdonald@gmail.com">kobbyedinamdonald@gmail.com</a> </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               {/* <a
                 href="#"
