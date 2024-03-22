@@ -14,22 +14,22 @@
 */
 const callouts = [
     {
-        name: 'Desk and Office',
-        description: 'Work from home accessories',
+        name: 'Built with react and commerce.js',
+        description: 'Ecommerce website',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg',
         imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
         href: '#',
     },
     {
-        name: 'Self-Improvement',
-        description: 'Journals and note-taking',
+        name: 'Unlimited movies at your fingertips',
+        description: 'Movie Streaming Webapp',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg',
         imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
         href: '#',
     },
     {
-        name: 'Travel',
-        description: 'Daily commute essentials',
+        name: 'Showcase your branding with top-notch langding page',
+        description: "Dave's landing Page",
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg',
         imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
         href: '#',
@@ -60,10 +60,6 @@ export default function Projects() {
                                     </a>
                                 </h3>
                                 <p className="text-base font-semibold text-gray-900">{callout.description}</p>
-                                <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">
-                                    Click me
-                                </button>
-
                             </div>
                         ))}
                     </div>
