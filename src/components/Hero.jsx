@@ -39,13 +39,13 @@ export default function Hero() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900" onClick={() => alert("This site is under production. Thanks for testing")}>
                 {item.name}
               </a>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            <a href="#" className="text-sm font-semibold leading-6 text-gray-900" onClick={() => alert("This site is under production. Thanks for testing")}>
               Contact Me <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
@@ -79,6 +79,7 @@ export default function Hero() {
                       key={item.name}
                       href={item.href}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      onClick={() => alert("This site is under production. Thanks for testing")}
                     >
                       {item.name}
                     </a>
@@ -88,6 +89,7 @@ export default function Hero() {
                   <a
                     href="#"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => alert("This site is under production. Thanks for testing")}
                   >
                     Contact Me
                   </a>
@@ -113,7 +115,7 @@ export default function Hero() {
         </div>
         <div className="mx-auto max-w-2xl sm:py-48 lg:py-40 pad-top py-24 ">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20" onClick={() => alert("This site is under production. Thanks for testing")}>
               Programming is not just coding, it is solving problems.
               <a href="#" className="font-semibold text-indigo-600">
                 <span className="absolute inset-0" aria-hidden="true" />
