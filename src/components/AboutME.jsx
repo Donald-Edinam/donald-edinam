@@ -38,7 +38,7 @@ export default function AboutMe() {
               <p className="text-base font-semibold leading-7 text-indigo-600">About</p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Donald Edinam</h1>
               <p className="mt-6 text-xl leading-8 text-gray-700">
-               A Software Engineer
+               A Frontend Developer
               </p>
             </div>
           </div>
