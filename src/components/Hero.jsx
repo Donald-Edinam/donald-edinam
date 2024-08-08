@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ReactTyped } from 'react-typed'
+import { motion } from 'framer-motion'
 
 const navigation = [
   { name: 'Home', href: '#' },
@@ -113,6 +114,10 @@ export default function Hero() {
             }}
           />
         </div>
+        <motion.section 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        >
         <div className="mx-auto max-w-2xl sm:py-48 lg:py-40 pad-top py-24 ">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20" onClick={() => alert("This site is under production. Thanks for testing")}>
@@ -149,6 +154,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
+        </motion.section>
         <div
           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
           aria-hidden="true"

@@ -1,5 +1,6 @@
 import React from "react"
 import Vacation from "../../src/assets/vacation.jpg"
+import { motion } from "framer-motion"
 
 // const callouts = [
 //     {
