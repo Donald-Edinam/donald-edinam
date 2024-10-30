@@ -112,3 +112,6 @@
 
 
 ![Donald Edinam's Graph](https://github-readme-activity-graph.vercel.app/graph?username=Donald-Edinam&custom_title=Donald%20Edinam's%20GitHub%20Activity%20Graph&bg_color=0D1117&color=7F3FBF&line=7F3FBF&point=7F3FBF&area_color=FFFFFF&title_color=FFFFFF&area=true)
+
+
+<a href="https://app.daily.dev/kobbylynux_"><img src="https://api.daily.dev/devcards/v2/voazi8MSTLeRwUqmGkwgS.png?type=default&r=pap" width="356" alt="Donald Edinam's Dev Card"/></a>
