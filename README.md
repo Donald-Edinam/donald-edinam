@@ -89,4 +89,4 @@
   </a>
 </p>
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=Donald-Edinam&theme=radical&row=1)](https://github.com/ryo-ma/github-profile-trophy)
+[![trophy](https://github-profile-trophy.vercel.app/?username=Donald-Edinam&theme=tokyonight)
