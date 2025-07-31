@@ -80,7 +80,7 @@ export default function RootLayout({
               <div className="fixed inset-0 -z-10 mesh-bg opacity-30" />
               
               {/* Main content container */}
-              <div className="relative max-w-6xl mx-auto px-6 py-12 sm:py-8">
+              <div className="relative max-w-6xl mx-auto px-2 py-12 sm:py-4">
                 {children}
                 <Navbar />
               </div>
