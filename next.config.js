@@ -2,8 +2,21 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['eldoraui.site', "media.licdn.com"], // Add 'github.com' to the list of allowed image domains
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'eldoraui.site',
+      },
+      {
+        protocol: 'https',
+        hostname: 'media.licdn.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'github.com',
+      },
+    ],
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
