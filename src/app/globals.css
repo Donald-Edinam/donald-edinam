@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode */
+    --background: 40 53% 93%;          /* #F5EEDC */
+    --foreground: 210 50% 20%;         /* #183B4E */
+
+    --card: 40 53% 93%;
+    --card-foreground: 210 50% 20%;
+
+    --popover: 40 53% 93%;
+    --popover-foreground: 210 50% 20%;
+
+    --primary: 212 56% 35%;            /* #27548A */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 53% 75%;           /* lighter beige */
+    --secondary-foreground: 210 50% 20%;
+
+    --muted: 210 40% 85%;
+    --muted-foreground: 210 40% 35%;
+
+    --accent: 40 64% 60%;              /* #DDA853 */
+    --accent-foreground: 210 50% 20%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 25% 80%;
+    --input: 40 25% 80%;
+    --ring: 212 56% 35%;
+
+    --radius: 0.75rem;
+
+    --gradient-from: 212 56% 35%;
+    --gradient-via: 40 64% 60%;
+    --gradient-to: 210 50% 20%;
+
+    --glass: 212 56% 35% / 0.05;
+    --glass-border: 212 56% 35% / 0.12;
+  }
+
+  .dark {
+    /* Dark mode */
+    --background: 210 50% 20%;         /* #183B4E */
+    --foreground: 40 53% 93%;          /* #F5EEDC */
+
+    --card: 210 50% 18%;
+    --card-foreground: 40 53% 93%;
+
+    --popover: 210 50% 15%;
+    --popover-foreground: 40 53% 93%;
+
+    --primary: 212 56% 45%;            /* lighter blue for dark mode */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 53% 65%;
+    --secondary-foreground: 210 50% 20%;
+
+    --muted: 210 30% 30%;
+    --muted-foreground: 40 53% 93%;
+
+    --accent: 40 64% 60%;              /* gold stays same */
+    --accent-foreground: 210 50% 20%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 30% 30%;
+    --input: 210 30% 30%;
+    --ring: 212 56% 45%;
+
+    --gradient-from: 212 56% 45%;
+    --gradient-via: 40 64% 60%;
+    --gradient-to: 210 50% 20%;
+
+    --glass: 212 56% 45% / 0.04;
+    --glass-border: 212 56% 45% / 0.10;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-outfit;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent-foreground/20;
+  }
+}
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 35px 35px rgba(0, 0, 0, 0.25);
+  }
+
+  .dark .text-shadow-dark {
+    text-shadow: 0 35px 35px rgba(255, 255, 255, 0.25);
+  }
+}
+
+@layer components {
+  .glass {
+    @apply backdrop-blur-md bg-glass border border-glass-border;
+  }
+
+  .glass-card {
+    @apply glass rounded-2xl p-6 shadow-xl dark:shadow-2xl;
+  }
+
+  .btn-gradient {
+    @apply bg-gradient-to-r from-primary via-gradient-via to-gradient-to text-primary-foreground font-semibold;
+    @apply hover:shadow-[0_0_10px_hsl(var(--primary))] dark:hover:shadow-[0_0_15px_hsl(var(--primary))] hover:scale-105 transition-all duration-300;
+    @apply border border-primary/20 shadow-lg;
+  }
+
+  .btn-professional {
+    @apply bg-primary text-primary-foreground font-semibold px-6 py-1 rounded-lg;
+    @apply hover:bg-primary/90 hover:shadow-xl hover:scale-105 transition-all duration-300;
+    @apply border border-primary/20 shadow-lg;
+  }
+
+  .animated-bg {
+    background: linear-gradient(-45deg, hsl(var(--gradient-from)), hsl(var(--gradient-via)), hsl(var(--gradient-to)), hsl(var(--primary)));
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+  }
+
+  .mesh-bg {
+    background: radial-gradient(at 40% 20%, hsl(var(--gradient-from)) 0px, transparent 60%),
+                radial-gradient(at 80% 0%, hsl(var(--gradient-via)) 0px, transparent 60%),
+                radial-gradient(at 0% 50%, hsl(var(--gradient-to)) 0px, transparent 60%),
+                radial-gradient(at 80% 50%, hsl(var(--primary)) 0px, transparent 60%),
+                radial-gradient(at 0% 100%, hsl(var(--gradient-from)) 0px, transparent 60%),
+                radial-gradient(at 80% 100%, hsl(var(--gradient-via)) 0px, transparent 60%),
+                radial-gradient(at 0% 0%, hsl(var(--gradient-to)) 0px, transparent 60%);
+  }
+
+  .accent-border {
+    @apply border-l-4 border-primary;
+  }
+
+  .professional-card {
+    @apply glass-card border border-primary/10 shadow-xl;
+    @apply hover:border-primary/20 hover:shadow-2xl transition-all duration-300;
+  }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h3 code {
+  @apply !text-lg md:!text-xl;
+}
+
+pre {
+  @apply !px-0 rounded-lg overflow-x-auto py-4;
+}
+
+pre [data-line] {
+  @apply px-4;
+}
+
+code {
+  @apply text-sm md:text-base !leading-loose;
+}
+
+pre > code {
+  counter-reset: line;
+}
+
+code[data-theme*=" "],
+code[data-theme*=" "] span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  code[data-theme*=" "],
+  code[data-theme*=" "] span {
+    color: var(--shiki-dark);
+    background-color: var(--shiki-dark-bg);
+  }
+}
+
+code[data-line-numbers] {
+  counter-reset: line;
+}
+
+code[data-line-numbers] > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  @apply inline-block w-4 mr-4 text-right text-gray-500;
+}
+
+code > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 1rem;
+  margin-right: 2rem;
+  text-align: right;
+  color: gray;
+}
+
+code[data-line-numbers-max-digits="2"] > [data-line]::before {
+  width: 2rem;
+}
+
+code[data-line-numbers-max-digits="3"] > [data-line]::before {
+  width: 3rem;
+}
