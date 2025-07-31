@@ -63,20 +63,20 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <AnimatedBlob />
 
-        <div className="container mx-auto py-10 max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16 max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center min-h-[calc(100vh-8rem)] lg:min-h-[calc(100vh-4rem)]">
             {/* Left Content */}
             <motion.div
-              className="space-y-6 lg:space-y-8 text-center lg:text-left"
+              className="space-y-4 sm:space-y-6 lg:space-y-8 text-center lg:text-left order-2 lg:order-1"
               initial="initial"
               animate="animate"
               variants={staggerContainer}
             >
               <motion.div variants={staggerItem}>
-                <Badge variant="secondary" className="mb-4 glass-card border-0 text-xs sm:text-sm">
+                <Badge variant="secondary" className="mb-3 sm:mb-4 glass-card border-0 text-xs sm:text-sm px-3 py-1">
                   <span className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                     <span className="hidden sm:inline">Let&apos;s build something great together</span>
@@ -85,12 +85,10 @@ export default function HomePage() {
                 </Badge>
               </motion.div>
 
-              <motion.div variants={staggerItem} className="space-y-3 lg:space-y-4">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-foreground via-foreground/80 to-foreground/60 bg-clip-text text-transparent leading-tight">
+              <motion.div variants={staggerItem} className="space-y-2 sm:space-y-3 lg:space-y-4">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-foreground via-foreground/80 to-foreground/60 bg-clip-text text-transparent leading-tight">
                   I&apos;m, {" "}
-                  <span className="bg-clip-text text-transparent font-extrabold
-  bg-gradient-to-r from-primary to-secondary
-  [-webkit-text-stroke:1px_#27548A] block sm:inline">
+                  <span className="bg-clip-text text-transparent font-extrabold bg-gradient-to-r from-primary to-secondary [-webkit-text-stroke:1px_#27548A] block sm:inline">
                     {DATA.name}
                   </span>
                   <motion.span
@@ -102,9 +100,9 @@ export default function HomePage() {
                   </motion.span>
                 </h1>
 
-                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground font-medium">
+                <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-muted-foreground font-medium">
                   I build{" "}
-                  <span className="bg-gradient-to-r from-primary to-gradient-via bg-clip-text text-transparent font-bold text-shadow dark:text-shadow-dark">
+                  <span className="bg-gradient-to-r from-primary to-gradient-via bg-clip-text text-transparent font-bold">
                     modern web experiences
                   </span>
                 </h2>
@@ -112,23 +110,23 @@ export default function HomePage() {
 
               <motion.p
                 variants={staggerItem}
-                className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0"
+                className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0 px-2 sm:px-0"
               >
                 {DATA.description}
               </motion.p>
 
               <motion.div
                 variants={staggerItem}
-                className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4"
+                className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 px-2 sm:px-0"
               >
-                <Button size="lg" className="btn-gradient to-accent py-5 from-primary group shadow-xl w-full sm:w-auto">
+                <Button size="lg" className="btn-gradient to-accent py-3 sm:py-5 from-primary group shadow-xl w-full sm:w-auto text-sm sm:text-base">
                   <Link href="/contact" className="flex items-center gap-2">
                     Let&apos;s Connect
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
 
-                <Button size="lg" variant="outline" className="professional-card group border-primary/20 hover:border-primary/40 w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="professional-card group border-primary/20 hover:border-primary/40 w-full sm:w-auto py-3 sm:py-5 text-sm sm:text-base">
                   <Link href="/projects" className="flex items-center gap-2">
                     View Projects
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -138,37 +136,37 @@ export default function HomePage() {
 
               <motion.div
                 variants={staggerItem}
-                className="flex items-center justify-center lg:justify-start gap-4 pt-4"
+                className="flex items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2 sm:pt-4"
               >
                 <Link
                   href={DATA.contact.social.GitHub.url}
-                  className="p-3 glass-card border-0 hover:scale-110 transition-transform"
+                  className="p-2 sm:p-3 glass-card border-0 hover:scale-110 transition-transform"
                 >
-                  <Github className="w-5 h-5" />
+                  <Github className="w-4 h-4 sm:w-5 sm:h-5" />
                 </Link>
                 <Link
                   href={DATA.contact.social.LinkedIn.url}
-                  className="p-3 glass-card border-0 hover:scale-110 transition-transform"
+                  className="p-2 sm:p-3 glass-card border-0 hover:scale-110 transition-transform"
                 >
-                  <Linkedin className="w-5 h-5" />
+                  <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
                 </Link>
                 <Link
                   href="mailto:contact@donaldedinam.me"
-                  className="p-3 glass-card border-0 hover:scale-110 transition-transform"
+                  className="p-2 sm:p-3 glass-card border-0 hover:scale-110 transition-transform"
                 >
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                 </Link>
               </motion.div>
             </motion.div>
 
             {/* Right Content - Profile Image */}
             <motion.div
-              className="relative order-first lg:order-last"
+              className="relative order-1 lg:order-2 mb-4 sm:mb-6 lg:mb-0"
               initial="initial"
               animate="animate"
               variants={fadeInRight}
             >
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto">
+              <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary via-gradient-via to-gradient-to rounded-full animate-pulse-glow shadow-2xl" />
                 <div className="absolute inset-2 bg-background rounded-full overflow-hidden">
                   <Image
@@ -182,19 +180,19 @@ export default function HomePage() {
 
                 {/* Floating elements */}
                 <motion.div
-                  className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 glass-card p-2 sm:p-3 border-0"
+                  className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 md:-top-4 md:-right-4 glass-card p-1 sm:p-2 md:p-3 border-0"
                   animate={{ y: [-10, 10, -10] }}
                   transition={{ duration: 4, repeat: Infinity }}
                 >
-                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full" />
+                  <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 md:w-3 md:h-3 bg-green-500 rounded-full" />
                 </motion.div>
 
                 <motion.div
-                  className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 glass-card p-3 sm:p-4 border-0"
+                  className="absolute -bottom-1 -left-1 sm:-bottom-2 sm:-left-2 md:-bottom-4 md:-left-4 glass-card p-2 sm:p-3 md:p-4 border-0"
                   animate={{ y: [10, -10, 10] }}
                   transition={{ duration: 3, repeat: Infinity }}
                 >
-                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                  <Calendar className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-primary" />
                 </motion.div>
               </div>
             </motion.div>
