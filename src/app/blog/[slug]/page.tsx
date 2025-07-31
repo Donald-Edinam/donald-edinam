@@ -8,11 +8,12 @@ import { Suspense } from "react";
 export async function generateMetadata({
   params,
 }: {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }): Promise<Metadata | undefined> {
-  let post = await getPost(params.slug);
+  const resolvedParams = await params;
+  let post = await getPost(resolvedParams.slug);
 
   let {
     title,
@@ -50,12 +51,12 @@ export async function generateMetadata({
 export default async function Blog({
   params,
 }: {
-  params: {
+  params: Promise<{
     slug: string;
-   
-  };
+  }>;
 }) {
-  let post = await getPost(params.slug);
+  const resolvedParams = await params;
+  let post = await getPost(resolvedParams.slug);
 
   if (!post) {
     notFound();
