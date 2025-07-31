@@ -5,13 +5,13 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
+
 export async function generateMetadata({
   params,
-}: {
-  params: Promise<{
-    slug: string;
-  }>;
-}): Promise<Metadata | undefined> {
+}: PageProps): Promise<Metadata | undefined> {
   const resolvedParams = await params;
   let post = await getPost(resolvedParams.slug);
 
@@ -48,13 +48,7 @@ export async function generateMetadata({
 }
 
 
-export default async function Blog({
-  params,
-}: {
-  params: Promise<{
-    slug: string;
-  }>;
-}) {
+export default async function Blog({ params }: PageProps) {
   const resolvedParams = await params;
   let post = await getPost(resolvedParams.slug);
 
