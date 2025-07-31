@@ -441,11 +441,11 @@ export default function AboutPage() {
         <div className="container mx-auto px-6">
           <Card className="professional-card p-12 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Let's Build Something Amazing Together
+              Let&apos;s Build Something Amazing Together
             </h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              I'm always excited to work on new projects and collaborate with talented individuals. 
-              Let's discuss how we can bring your ideas to life.
+              I&apos;m always excited to work on new projects and collaborate with talented individuals.
+              Let&apos;s discuss how we can bring your ideas to life.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="btn-gradient shadow-xl">

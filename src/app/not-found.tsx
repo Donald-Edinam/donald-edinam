@@ -73,12 +73,12 @@ export default function NotFound() {
             <h1 className="text-4xl lg:text-5xl font-bold mb-4">
               Oops! This Page{" "}
               <span className="bg-gradient-to-r from-primary via-gradient-via to-gradient-to bg-clip-text text-transparent font-extrabold">
-                Doesn't Exist
+                Doesn&apos;t Exist
               </span>
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              The page you're looking for might have been moved, deleted, or you might have entered the wrong URL. 
-              Don't worry, let's get you back on track!
+              The page you&apos;re looking for might have been moved, deleted, or you might have entered the wrong URL.
+              Don&apos;t worry, let&apos;s get you back on track!
             </p>
           </motion.div>
 

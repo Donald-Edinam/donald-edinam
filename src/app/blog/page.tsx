@@ -99,7 +99,7 @@ export default function BlogPage() {
               </h2>
               
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                I'm currently working on creating valuable content about web development, 
+                I&apos;m currently working on creating valuable content about web development,
                 frontend technologies, and my journey as a software engineer. 
                 Stay tuned for insightful articles and tutorials!
               </p>
@@ -142,7 +142,7 @@ export default function BlogPage() {
           <motion.div variants={staggerItem} className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">What to Expect</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Here's what I'll be sharing once the blog is live
+              Here&apos;s what I&apos;ll be sharing once the blog is live
             </p>
           </motion.div>
 

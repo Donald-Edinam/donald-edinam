@@ -228,12 +228,12 @@ export default function ProjectsPage() {
               Interested in collaborating?
             </h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+              I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Badge className="btn-gradient px-6 py-3 text-base cursor-pointer">
-                  Let's Work Together
+                  Let&apos;s Work Together
                 </Badge>
               </motion.div>
             </div>

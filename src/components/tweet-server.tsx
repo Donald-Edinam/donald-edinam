@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import Image from "next/image";
 import {
   enrichTweet,
   type EnrichedTweet,
@@ -124,9 +125,9 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
   <div className="flex flex-row justify-between tracking-tight">
     <div className="flex items-center space-x-2">
       <a href={tweet.user.url} target="_blank" rel="noreferrer">
-        <img
+        <Image
           title={`Profile picture of ${tweet.user.name}`}
-          alt={tweet.user.screen_name}
+          alt={`Profile picture of ${tweet.user.screen_name}`}
           height={48}
           width={48}
           src={tweet.user.profile_image_url_https}
@@ -213,11 +214,13 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => (
       <div className="relative flex transform-gpu snap-x snap-mandatory gap-4 overflow-x-auto">
         <div className="shrink-0 snap-center sm:w-2" />
         {tweet.photos.map((photo) => (
-          <img
+          <Image
             key={photo.url}
             src={photo.url}
             title={"Photo by " + tweet.user.name}
-            alt={tweet.text}
+            alt={tweet.text || "Tweet photo"}
+            width={400}
+            height={256}
             className="h-64 w-5/6 shrink-0 snap-center snap-always rounded-xl border object-cover shadow-sm"
           />
         ))}
@@ -228,9 +231,12 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => (
       !tweet.photos &&
       // @ts-expect-error: The type of `card.binding_values.thumbnail_image_large` might be undefined.
       tweet?.card?.binding_values?.thumbnail_image_large?.image_value.url && (
-        <img
+        <Image
           // @ts-expect-error: Accessing potentially undefined property on tweet.card.
           src={tweet.card.binding_values.thumbnail_image_large.image_value.url}
+          alt="Tweet card thumbnail"
+          width={400}
+          height={256}
           className="h-64 rounded-xl border object-cover shadow-sm"
         />
       )}

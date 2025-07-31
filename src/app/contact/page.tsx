@@ -67,15 +67,15 @@ export default function ContactPage() {
                 Get In Touch
               </Badge>
               <h1 className="text-4xl lg:text-5xl font-bold mb-4">
-                Let's Build Something{" "}
+                Let&apos;s Build Something{" "}
                 <span className="bg-gradient-to-r from-primary via-gradient-via to-gradient-to bg-clip-text text-transparent font-extrabold">
                   Amazing Together
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                I'm always excited to work on new projects and collaborate with talented individuals. 
-                Whether you have a project in mind, want to discuss opportunities, or just want to say hello, 
-                I'd love to hear from you.
+                I&apos;m always excited to work on new projects and collaborate with talented individuals.
+                Whether you have a project in mind, want to discuss opportunities, or just want to say hello,
+                I&apos;d love to hear from you.
               </p>
             </motion.div>
           </div>
@@ -102,7 +102,7 @@ export default function ContactPage() {
               </div>
               <h3 className="font-semibold text-lg mb-2">Email</h3>
               <p className="text-muted-foreground text-sm mb-4">
-                Send me an email and I'll get back to you as soon as possible.
+                Send me an email and I&apos;ll get back to you as soon as possible.
               </p>
               <Button variant="outline" size="sm" className="w-full">
                 <Link href="mailto:donaldedinam@gmail.com" className="flex items-center gap-2">
@@ -168,7 +168,7 @@ export default function ContactPage() {
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">Send Me a Message</h2>
               <p className="text-muted-foreground">
-                Fill out the form below and I'll get back to you within 24 hours.
+                Fill out the form below and I&apos;ll get back to you within 24 hours.
               </p>
             </div>
             
@@ -261,8 +261,8 @@ export default function ContactPage() {
               Ready to Start Your Next Project?
             </h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              I'm currently available for freelance work and new opportunities. 
-              Let's discuss how we can bring your ideas to life with modern web technologies.
+              I&apos;m currently available for freelance work and new opportunities.
+              Let&apos;s discuss how we can bring your ideas to life with modern web technologies.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="btn-gradient shadow-xl">

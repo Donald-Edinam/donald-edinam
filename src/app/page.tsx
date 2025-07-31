@@ -79,15 +79,15 @@ export default function HomePage() {
                 <Badge variant="secondary" className="mb-4 glass-card border-0 text-xs sm:text-sm">
                   <span className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                    <span className="hidden sm:inline">Let's build something great together</span>
-                    <span className="sm:hidden">Let's build together</span>
+                    <span className="hidden sm:inline">Let&apos;s build something great together</span>
+                    <span className="sm:hidden">Let&apos;s build together</span>
                   </span>
                 </Badge>
               </motion.div>
 
               <motion.div variants={staggerItem} className="space-y-3 lg:space-y-4">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-foreground via-foreground/80 to-foreground/60 bg-clip-text text-transparent leading-tight">
-                  I'm, {" "}
+                  I&apos;m, {" "}
                   <span className="bg-clip-text text-transparent font-extrabold
   bg-gradient-to-r from-primary to-secondary
   [-webkit-text-stroke:1px_#27548A] block sm:inline">
@@ -123,7 +123,7 @@ export default function HomePage() {
               >
                 <Button size="lg" className="btn-gradient to-accent py-5 from-primary group shadow-xl w-full sm:w-auto">
                   <Link href="/contact" className="flex items-center gap-2">
-                    Let's Connect
+                    Let&apos;s Connect
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
