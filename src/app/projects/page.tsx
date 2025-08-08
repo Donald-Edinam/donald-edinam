@@ -1,6 +1,6 @@
 "use client";
 
-import { HoverEffect } from '@/components/contributions-card';
+// import { HoverEffect } from '@/components/contributions-card';
 import { ProjectCard } from '@/components/project-card';
 import Image from 'next/image';
 import { DATA } from '@/data';
@@ -8,8 +8,8 @@ import type { Metadata } from 'next';
 import Markdown from 'react-markdown';
 import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
-import { Card } from '@/components/ui/card';
-import { Calendar, MapPin, Trophy, Code, GitBranch } from 'lucide-react';
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Calendar, MapPin, Trophy, Code, GitBranch, Clock } from 'lucide-react';
 
 // Animation variants
 const fadeInUp = {
@@ -120,8 +120,19 @@ export default function ProjectsPage() {
               {DATA.contributionssummary}
             </p>
           </div>
+          <div className="flex flex-col items-center">
+            <Card className="w-full max-w-md mx-auto mb-8">
+              <CardHeader className='text-center p-5'>
+                <CardTitle>Coming Soon</CardTitle>
+              </CardHeader>
+              {/* <Clock className="w-4 h-4 mr-2 text-muted-foreground text-gradient-to-r from-primary to-purple-600" /> */}
+              <CardDescription className="text-center p-5">
+                More projects are coming soon, stay tuned!
+              </CardDescription>
+            </Card>
+          </div>
           
-          <HoverEffect items={DATA.contributions} />
+          {/* <HoverEffect items={DATA.contributions} /> */}
         </div>
       </motion.section>
 
