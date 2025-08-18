@@ -81,14 +81,14 @@ export default function HomePage() {
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                     <span className="hidden sm:inline">Let&apos;s build something great together</span>
                     <span className="sm:hidden">Let&apos;s build together</span>
-                  </span>
+                  </span>center
                 </Badge>
               </motion.div>
 
               <motion.div variants={staggerItem} className="space-y-2 sm:space-y-3 lg:space-y-4">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-foreground via-foreground/80 to-foreground/60 bg-clip-text text-transparent leading-tight">
                   I&apos;m, {" "}
-                  <span className="bg-clip-text text-transparent font-extrabold bg-gradient-to-r from-primary to-secondary [-webkit-text-stroke:1px_#27548A] block sm:inline">
+                  <span className="bg-clip-text text-transparent font-extrabold block sm:inline">
                     {DATA.name}
                   </span>
                   <motion.span
@@ -303,7 +303,7 @@ export default function HomePage() {
               <Button size="lg" className="btn-gradient w-full sm:w-auto">
                 <Link href="/contact" className="flex items-center gap-2">
                   Get In Touch
-                  <Mail className="w-4 h-4" />
+                  <Mail className="w-6 h-6" />
                 </Link>
               </Button>
             </div>
