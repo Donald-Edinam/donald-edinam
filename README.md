@@ -90,3 +90,5 @@
 </p>
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=Donald-Edinam&theme=tokyonight)
+
+[![committers.top badge](https://user-badge.committers.top/ghana/Donald-Edinam.svg)](https://user-badge.committers.top/ghana/Donald-Edinam)
